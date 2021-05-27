@@ -9,13 +9,13 @@ function onModelLoaded(){
     console.log('Model Loaded!');
 }
 
-function gotResult(result, error){
+function gotResult(results, error){
     if(error){
         console.error(error);
     }else{
         console.log(results);
-        document.querySelector('#result_object_name').innerHTML=result[0].label;
-        document.querySelector('#result_object_name').innerHTML=result[0].label.confidence.toFixed(3);
+        document.querySelector('#result_object_name').innerHTML=results[0].label;
+        document.querySelector('#result_object_name').innerHTML=results[0].confidence.toFixed(3);
     }
 }
 
